@@ -73,6 +73,12 @@ SepsisAgent achieves the best DR and WPDIS scores among evaluated methods, while
 
 The ablation shows that reinforcement learning in the Clinical World Model environment is the main driver of policy-value improvement. The final stage also improves intrinsic patient-dynamics prediction, including in-hospital mortality (IHM) and 24-hour vasopressor requirement (VR), even without simulator access during evaluation.
 
+## 🙏 Acknowledgement
+
+We gratefully acknowledge the [MIMIC Code Repository](https://github.com/MIT-LCP/mimic-code) for providing valuable reference implementations and resources for processing MIMIC critical care data. Our data processing pipeline was developed with reference to this project.
+
+The data used in this work are derived from [MIMIC-IV](https://physionet.org/content/mimiciv/), a publicly available, de-identified electronic health record dataset hosted on PhysioNet.
+
 
 ## 📖 Citation
 
