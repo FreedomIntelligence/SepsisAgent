@@ -73,13 +73,6 @@ SepsisAgent achieves the best DR and WPDIS scores among evaluated methods, while
 
 The ablation shows that reinforcement learning in the Clinical World Model environment is the main driver of policy-value improvement. The final stage also improves intrinsic patient-dynamics prediction, including in-hospital mortality (IHM) and 24-hour vasopressor requirement (VR), even without simulator access during evaluation.
 
-<p align="center">
-  <img src="assets/reward-comparison.png" width="80%" alt="Cumulative reward comparison between SepsisAgent and o3 + WM">
-</p>
-
-## ⚠️ Disclaimer
-
-This project is for research purposes only. The models and simulation results are not intended for direct clinical deployment or autonomous medical decision-making.
 
 ## 📖 Citation
 
