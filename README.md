@@ -26,9 +26,6 @@ The agent is trained with a three-stage curriculum: patient-dynamics supervised 
 
 SepsisAgent uses a Clinical World Model as both an inference-time simulator and a training environment. The world model predicts action-conditioned patient evolution, while the LLM agent learns how to interpret these simulated responses for long-horizon treatment planning.
 
-<p align="center">
-  <img src="assets/world-model.png" width="75%" alt="Clinical World Model architecture">
-</p>
 
 <p align="center">
   <img src="assets/training-pipeline.png" width="95%" alt="Three-stage SepsisAgent training pipeline">
