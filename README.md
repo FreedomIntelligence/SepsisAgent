@@ -1,5 +1,3 @@
-# SepsisAgent
-
 # Agentifying Patient Dynamics within LLMs through Interacting with Clinical World Model
 
 <div align="center">
