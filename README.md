@@ -68,8 +68,76 @@ SepsisAgent achieves the best DR and WPDIS scores among evaluated methods, while
 
 The ablation shows that reinforcement learning in the Clinical World Model environment is the main driver of policy-value improvement. The final stage also improves intrinsic patient-dynamics prediction, including in-hospital mortality (IHM) and 24-hour vasopressor requirement (VR), even without simulator access during evaluation.
 
+## 🚀 Quick Start
+
+### Repository Layout
+
+```
+SepsisAgent/
+├── inference.py                 # Main agent inference (vLLM + propose-simulate-refine)
+├── worldmodel_inference.py      # Standalone Clinical World Model inference demo
+├── run_inference.sh             # One-click launcher for the agent demo
+├── requirements.txt             # Python dependencies
+├── worldmodel/                  # Clinical World Model checkpoints & configs
+│   ├── state_model_log.pt       #   - State Model (next-state predictor)
+│   ├── outcome.pt               #   - Outcome Model (90-day mortality)
+│   ├── scaler_params_log.json   #   - Feature standardization params
+│   └── episode_feature_config.json
+├── test_data/                   # Single anonymized inference case
+│   ├── test_case.pkl            #   - One MIMIC-IV episode (stay_id=37523171)
+│   └── real_episode_rewards_test_case.json
+├── examples/                    # Worked examples (see examples/README.md)
+│   ├── inference_template.json  #   - Full agent rollout (raw JSON)
+│   ├── inference_template.md    #   - Same rollout rendered for humans
+│   └── worldmodel_inference_example.txt
+├── output/                      # Created at runtime (vLLM logs, results)
+└── assets/                      # README figures
+```
+
+### Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+> The full MIMIC-IV-derived test set (725 episodes) is not redistributable. We ship a single inference case under `test_data/` that has been derived from a publicly accessible MIMIC-IV stay so the pipeline can be exercised end-to-end.
+
+### 1. Run the World Model alone
+
+The Clinical World Model is a self-contained module: given a patient's history window and a candidate action, it predicts the next-step dynamics, ventilation probability, and (at trajectory end) 90-day mortality.
+
+```bash
+# Quick demo (first 5 steps + outcome)
+python worldmodel_inference.py --test
+
+# Full trajectory
+python worldmodel_inference.py
+```
+
+A reference output is provided at `examples/worldmodel_inference_example.txt`.
+
+### 2. Run the full SepsisAgent
+
+The main agent ties the LLM policy together with the World Model via OpenAI tool calling. It auto-launches local vLLM services and runs the propose-simulate-refine loop.
+
+```bash
+# Using the bundled launcher
+bash run_inference.sh /path/to/SepsisAgent-4B 1
+
+# Or directly
+python inference.py \
+    --model_path /path/to/SepsisAgent-4B \
+    --model_name SepsisAgent-4B \
+    --num_gpus 1 \
+    --base_port 8000 \
+    --test
+```
+
+The result JSON (rewards, actions, full multi-turn dialogue) will be written under `output/`. A worked-out reference rollout, including every system / user / tool_call / tool_response message, is provided at `examples/inference_template.md`.
+
 ## 🎯 To-Do
 - [x] Release the SepsisAgent-4B.
+- [x] Release a runnable single-case inference demo (this repo).
 - [ ] Upload the data processing scripts.
 
 ## 🙏 Acknowledgement
