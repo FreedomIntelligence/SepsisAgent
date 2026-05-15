@@ -8,7 +8,7 @@
 
 <div align="center">
 <h4>
-  📃 <a href="https://arxiv.org/abs/2605.14723" target="_blank">Paper</a> ｜ 🤗 <a href="https://github.com/FreedomIntelligence/SepsisAgent" target="_blank">SepsisAgent-4B</a>
+  📃 <a href="https://arxiv.org/abs/2605.14723" target="_blank">Paper</a> ｜ 🤗 <a href="https://huggingface.co/FreedomIntelligence/SepsisAgent-4B" target="_blank">SepsisAgent-4B</a>
 </h4>
 </div>
 
