@@ -1,0 +1,192 @@
+Device: cuda
+
+Loading World Model from ./worldmodel...
+  Loading State Model from: ./worldmodel/state_model_log.pt
+  Loading Outcome Model from: ./worldmodel/outcome.pt
+
+Loading test case from ./test_data/test_case.pkl...
+  Loaded 1 episode(s)
+
+======================================================================
+Episode info
+======================================================================
+  stay_id:        37523171
+  trajectory:     13 steps (52 hours)
+  real outcome:   release
+  mortality_90d:  0
+  age:            41
+  gender:         Female
+  charlson:       1.0
+
+======================================================================
+State Model: step-by-step prediction (teacher forcing)
+======================================================================
+
+[Step t=0 -> t=1]  Action: vaso=Low(1), fluid=Very High(4)
+  Predicted ventilation prob: 0.927 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  105.77  real=  138.60  diff= -32.83  
+  meanbp               pred=   81.29  real=   77.75  diff=  +3.54  
+  sysbp                pred=  101.87  real=  105.64  diff=  -3.77  
+  spo2                 pred=   96.49  real=  100.02  diff=  -3.53  
+  lactate              pred=    5.82  real=    4.22  diff=  +1.60  
+  creatinine           pred=    1.18  real=    2.18  diff=  -1.00  
+  platelet             pred=  158.24  real=  183.37  diff= -25.13  
+  pao2                 pred=   49.74  real=   93.10  diff= -43.36  
+  output_4hourly       pred=   32.52  real=   17.26  diff= +15.26  
+
+[Step t=1 -> t=2]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.969 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  136.14  real=  138.60  diff=  -2.45  
+  meanbp               pred=   95.96  real=   63.51  diff= +32.45  
+  sysbp                pred=   93.74  real=   81.58  diff= +12.17  
+  spo2                 pred=   96.65  real=   88.00  diff=  +8.66  
+  lactate              pred=    5.17  real=    7.34  diff=  -2.17  
+  creatinine           pred=    2.93  real=    2.09  diff=  +0.84  
+  platelet             pred=  239.86  real=  191.57  diff= +48.28  
+  pao2                 pred=  172.69  real=   69.94  diff=+102.75  
+  output_4hourly       pred=   19.11  real=   18.52  diff=  +0.59  
+
+[Step t=2 -> t=3]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.989 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  114.57  real=  138.60  diff= -24.02  
+  meanbp               pred=   59.63  real=   80.75  diff= -21.12  
+  sysbp                pred=  106.84  real=  104.41  diff=  +2.43  
+  spo2                 pred=   91.85  real=   88.00  diff=  +3.85  
+  lactate              pred=    8.27  real=    5.93  diff=  +2.34  
+  creatinine           pred=    2.18  real=    2.09  diff=  +0.10  
+  platelet             pred=  108.86  real=  191.57  diff= -82.71  
+  pao2                 pred=  184.82  real=   56.85  diff=+127.97  
+  output_4hourly       pred=   14.33  real=   19.24  diff=  -4.91  
+
+[Step t=3 -> t=4]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.988 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  144.18  real=  138.60  diff=  +5.59  
+  meanbp               pred=   74.28  real=   69.23  diff=  +5.06  
+  sysbp                pred=  111.13  real=   84.19  diff= +26.94  
+  spo2                 pred=   92.88  real=   88.00  diff=  +4.89  
+  lactate              pred=    9.29  real=    6.73  diff=  +2.55  
+  creatinine           pred=    2.17  real=    2.68  diff=  -0.51  
+  platelet             pred=  211.23  real=  127.01  diff= +84.22  
+  pao2                 pred=   89.49  real=   74.98  diff= +14.51  
+  output_4hourly       pred=   13.77  real=   17.04  diff=  -3.27  
+
+[Step t=4 -> t=5]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.985 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  138.84  real=  138.60  diff=  +0.24  
+  meanbp               pred=   69.63  real=   77.14  diff=  -7.51  
+  sysbp                pred=  108.84  real=   91.64  diff= +17.21  
+  spo2                 pred=   85.75  real=   88.00  diff=  -2.25  
+  lactate              pred=    7.56  real=    6.73  diff=  +0.83  
+  creatinine           pred=    2.59  real=    2.68  diff=  -0.09  
+  platelet             pred=  154.11  real=  127.01  diff= +27.10  
+  pao2                 pred=  112.30  real=   63.90  diff= +48.40  
+  output_4hourly       pred=   18.42  real=   17.49  diff=  +0.93  
+
+[Step t=5 -> t=6]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.978 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  140.72  real=  138.60  diff=  +2.13  
+  meanbp               pred=   84.58  real=   74.24  diff= +10.35  
+  sysbp                pred=   90.91  real=   88.88  diff=  +2.03  
+  spo2                 pred=   87.27  real=   88.00  diff=  -0.72  
+  lactate              pred=    6.42  real=    8.34  diff=  -1.92  
+  creatinine           pred=    3.17  real=    2.58  diff=  +0.59  
+  platelet             pred=  162.24  real=   73.71  diff= +88.52  
+  pao2                 pred=  134.58  real=   64.91  diff= +69.67  
+  output_4hourly       pred=   62.05  real=   18.17  diff= +43.88  
+
+[Step t=6 -> t=7]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.988 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  133.60  real=  132.12  diff=  +1.49  
+  meanbp               pred=   79.70  real=   82.26  diff=  -2.56  
+  sysbp                pred=   97.62  real=  100.95  diff=  -3.33  
+  spo2                 pred=   97.85  real=   88.00  diff=  +9.85  
+  lactate              pred=    3.19  real=    6.43  diff=  -3.24  
+  creatinine           pred=    1.72  real=    2.68  diff=  -0.96  
+  platelet             pred=  123.64  real=   69.61  diff= +54.02  
+  pao2                 pred=  150.05  real=   62.89  diff= +87.15  
+  output_4hourly       pred=    4.28  real=   22.11  diff= -17.84  
+
+[Step t=7 -> t=8]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.976 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  147.29  real=  116.01  diff= +31.29  
+  meanbp               pred=   90.87  real=   90.28  diff=  +0.59  
+  sysbp                pred=  123.22  real=  112.54  diff= +10.67  
+  spo2                 pred=   91.17  real=   88.00  diff=  +3.18  
+  lactate              pred=    5.70  real=    6.13  diff=  -0.43  
+  creatinine           pred=    3.10  real=    2.09  diff=  +1.01  
+  platelet             pred=  134.95  real=   61.41  diff= +73.54  
+  pao2                 pred=   79.96  real=   71.96  diff=  +8.01  
+  output_4hourly       pred=    2.52  real=   25.08  diff= -22.55  
+
+[Step t=8 -> t=9]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.958 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  119.37  real=  115.00  diff=  +4.37  
+  meanbp               pred=   76.94  real=   90.78  diff= -13.84  
+  sysbp                pred=  103.84  real=  112.79  diff=  -8.95  
+  spo2                 pred=   88.98  real=   97.52  diff=  -8.53  
+  lactate              pred=    5.28  real=    7.24  diff=  -1.96  
+  creatinine           pred=    2.03  real=    2.09  diff=  -0.05  
+  platelet             pred=   74.31  real=   61.41  diff= +12.89  
+  pao2                 pred=  116.56  real=   78.00  diff= +38.57  
+  output_4hourly       pred=  147.78  real=   24.46  diff=+123.33  
+
+[Step t=9 -> t=10]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.951 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  122.23  real=  108.12  diff= +14.11  
+  meanbp               pred=   72.51  real=   75.99  diff=  -3.48  
+  sysbp                pred=  120.63  real=   91.34  diff= +29.29  
+  spo2                 pred=   98.93  real=   97.52  diff=  +1.42  
+  lactate              pred=    8.30  real=    7.03  diff=  +1.26  
+  creatinine           pred=    2.65  real=    2.09  diff=  +0.57  
+  platelet             pred=   98.39  real=   61.41  diff= +36.98  
+  pao2                 pred=   34.07  real=  114.24  diff= -80.17  
+  output_4hourly       pred=   68.39  real=   22.25  diff= +46.14  
+
+[Step t=10 -> t=11]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.947 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  129.85  real=  108.05  diff= +21.80  
+  meanbp               pred=   68.28  real=   74.54  diff=  -6.26  
+  sysbp                pred=  111.89  real=   91.83  diff= +20.06  
+  spo2                 pred=   97.54  real=   88.00  diff=  +9.54  
+  lactate              pred=    3.93  real=    8.04  diff=  -4.11  
+  creatinine           pred=    1.45  real=    1.69  diff=  -0.24  
+  platelet             pred=   74.08  real=   46.04  diff= +28.03  
+  pao2                 pred=   65.96  real=   91.09  diff= -25.13  
+  output_4hourly       pred=   23.58  real=   21.42  diff=  +2.15  
+
+[Step t=11 -> t=12]  Action: vaso=Very High(4), fluid=Very High(4)
+  Predicted ventilation prob: 0.973 (on vent)
+  Feature                    Pred        Real        Diff
+  heart_rate           pred=  113.70  real=  106.19  diff=  +7.51  
+  meanbp               pred=   70.46  real=   73.24  diff=  -2.78  
+  sysbp                pred=  101.84  real=   96.27  diff=  +5.57  
+  spo2                 pred=   97.09  real=   88.00  diff=  +9.10  
+  lactate              pred=    4.81  real=    8.04  diff=  -3.23  
+  creatinine           pred=    2.11  real=    1.69  diff=  +0.42  
+  platelet             pred=   67.36  real=   46.04  diff= +21.32  
+  pao2                 pred=   90.63  real=   91.09  diff=  -0.45  
+  output_4hourly       pred=  153.22  real=   20.37  diff=+132.85  
+
+======================================================================
+Outcome Model: 90-day mortality prediction
+======================================================================
+  Predicted death probability: 0.6815
+  Predicted outcome:           death
+  Real outcome:                release
+  Match:                       NO
+
+======================================================================
+Done. State Model showed 12 step(s); Outcome Model evaluated full 13-step trajectory.
+======================================================================
+

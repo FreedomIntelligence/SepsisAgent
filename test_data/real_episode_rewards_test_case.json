@@ -1,0 +1,11 @@
+{
+  "569": {
+    "episode_idx": 569,
+    "stay_id": 37523171,
+    "worldmodel_val_idx": 569,
+    "mortality_90d": 0,
+    "outcome": "release",
+    "total_reward": 13.12832083153155,
+    "trajectory_length": 13
+  }
+}
