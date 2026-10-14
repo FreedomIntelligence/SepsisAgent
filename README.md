@@ -138,7 +138,6 @@ The result JSON (rewards, actions, full multi-turn dialogue) will be written und
 ## 🎯 To-Do
 - [x] Release the SepsisAgent-4B.
 - [x] Release a runnable single-case inference demo (this repo).
-- [ ] Upload the data processing scripts.
 
 ## 🙏 Acknowledgement
 
@@ -146,6 +145,7 @@ We gratefully acknowledge the [MIMIC Code Repository](https://github.com/MIT-LCP
 
 The data used in this work are derived from [MIMIC-IV](https://physionet.org/content/mimiciv/), a publicly available, de-identified electronic health record dataset hosted on PhysioNet.
 
+**Data Availability.** Due to MIMIC-IV data redistribution restrictions, we cannot publicly release the training data. For inquiries about the data processing pipeline and training data access, please contact minghaowu@link.cuhk.edu.cn. Any data access is subject to the applicable MIMIC-IV data use requirements.
 
 ## 📖 Citation
 
